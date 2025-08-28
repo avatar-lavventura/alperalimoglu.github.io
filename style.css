@@ -1,0 +1,42 @@
+/* Simple, elegant resume style for GitHub Pages */
+:root{
+  --bg:#ffffff;
+  --text:#0f172a;
+  --muted:#475569;
+  --accent:#1A4D8F;
+  --card:#f8fafc;
+  --border:#e2e8f0;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+.site-header{border-bottom:1px solid var(--border);background:linear-gradient(180deg,#fff, #fafcff)}
+.site-header .container{display:flex;gap:24px;justify-content:space-between;align-items:flex-end;padding:28px 20px}
+.id-block h1{margin:0;font-size:32px;line-height:1.2}
+.tagline{margin:6px 0 0;color:var(--muted);font-weight:500}
+.contact{display:flex;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:300px 1fr;gap:28px;margin-top:28px;margin-bottom:48px}
+.sidebar{position:sticky;top:16px;height:fit-content}
+.sidebar h2,.content h2{font-size:18px;margin:0 0 10px}
+section{margin-bottom:26px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;padding:0;list-style:none}
+.tags li{background:var(--card);border:1px solid var(--border);padding:6px 10px;border-radius:999px;font-size:12px}
+.bullets{padding-left:18px}
+.bullets li{margin-bottom:6px}
+.content h3{margin:0 0 4px;font-size:16px}
+.meta{color:var(--muted);font-size:13px;margin-bottom:6px}
+.btn{display:inline-block;border:1px solid var(--border);background:#fff;border-radius:10px;padding:8px 14px;cursor:pointer}
+.site-footer{border-top:1px solid var(--border);padding:18px 0;background:#fff;margin-top:20px}
+.small{font-size:13px;color:var(--muted)}
+@media (max-width:900px){
+  .grid{grid-template-columns:1fr}
+  .sidebar{position:static}
+}
+@media print{
+  body{background:#fff}
+  .site-header,.site-footer{border:0}
+  .grid{gap:18px}
+  a{color:#000;text-decoration:underline}
+}
