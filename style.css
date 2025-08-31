@@ -47,4 +47,12 @@ flex-wrap:wrap} footer{padding:40px 0 60px; color:var(--muted);
 text-align:center} @media (max-width:900px){ .hero{grid-template-columns:1fr}
 .links{display:none} .mobile-toggle{display:inline-flex} .item
 .meta{min-width:120px} .timeline::before{left:120px}
-.tl{grid-template-columns:130px 1fr} }
+.tl{grid-template-columns:130px 1fr} } /* --- Protect Our Dreams: vurgulu link
+--- */ .section .card p a.highlight-link { color: var(--brand) !important;
+font-weight: 700; text-decoration: underline !important; text-underline-offset:
+2px; text-decoration-thickness: 2px; } .section .card p a.highlight-link:hover {
+text-decoration-thickness: 3px; filter: brightness(0.9); } /* --- CTA'daki
+accent buton --- */ .btn-accent { background: var(--brand); color: #fff;
+font-weight: 700; border: 2px solid var(--brand); transition: background-color
+.25s, color .25s, border-color .25s; } .btn-accent:hover { background:
+transparent; color: var(--brand); border-color: var(--brand); }
