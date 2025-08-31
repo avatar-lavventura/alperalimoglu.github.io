@@ -1,194 +1,239 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/Person">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Alper Alimoğlu, Ph.D. — Resume</title>
-  <meta name="description" content="Resume of Alper Alimoğlu — Blockchain & Distributed Systems Researcher | Software Engineer.">
-  <link rel="icon" href="assets/favicon.svg">
-  <meta property="og:title" content="Alper Alimoğlu — Resume">
-  <meta property="og:description" content="Blockchain & Distributed Systems Researcher | Software Engineer">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="">
-  <meta name="twitter:card" content="summary">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alper Alimoglu — Personal Website</title>
+  <meta name="description" content="Blockchain & Distributed Systems Researcher — projects, publications, talks, and contact." />
+  <meta name="theme-color" content="#0ea5e9" />
+  <meta property="og:title" content="Alper Alimoglu — Personal Website"/>
+  <meta property="og:description" content="Blockchain & Distributed Systems Researcher — projects, publications, talks, and contact."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="assets/avatar.svg"/>
+  <link rel="icon" href="assets/avatar.svg"/>
+  <link rel="preload" href="style.css" as="style"/>
+  <link rel="stylesheet" href="style.css"/>
+  <script defer src="script.js"></script>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Alper Alimoğlu",
-    "jobTitle": "Blockchain & Distributed Systems Researcher",
-    "email": "mailto:alper.alimoglu@gmail.com",
-    "url": "",
-    "sameAs": ["https://github.com/avatar-lavventura","https://www.youtube.com/watch?v=dgOml-blbwI"],
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Istanbul",
-      "addressCountry": "Turkey"
-    }
-  }
+  {"@context": "https://schema.org", "@type": "Person", "name": "Alper Alimoglu", "alternateName": "Alper", "jobTitle": "Researcher • Software Engineer", "email": "mailto:alper.alimoglu@gmail.com", "image": "assets/avatar.svg", "url": "https://your-username.github.io/", "sameAs": ["https://github.com/avatar-lavventura"]}
   </script>
-  <style>
-    /* print button hidden on print */
-    @media print {
-      .no-print { display:none !important; }
-      a[href^="http"]::after { content: " (" attr(href) ")"; font-weight: normal; font-size: 0.9em; }
-    }
-  </style>
+  <style>/* tiny critical fixes for FOUC */ html{scroll-behavior:smooth}</style>
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
-      <div class="id-block">
-        <h1>Alper Alimoğlu, Ph.D.</h1>
-        <p class="tagline">Blockchain &amp; Distributed Systems Researcher&nbsp;|&nbsp;Software Engineer</p>
-      </div>
-      <div class="contact">
-        <a href="mailto:alper.alimoglu@gmail.com">alper.alimoglu@gmail.com</a>
-        <a href="https://github.com/avatar-lavventura" target="_blank" rel="noopener">github.com/avatar-lavventura</a>
-        <span>Istanbul, Turkey</span>
-      </div>
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Home">
+        <img class="avatar" src="assets/avatar.svg" alt="AA avatar" width="44" height="44"/>
+        <div>
+          <strong itemprop="name">Alper Alimoglu</strong>
+          <div class="muted small">Blockchain & Distributed Systems • Python • Solidity</div>
+        </div>
+      </a>
+      <nav class="links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
+        <a href="#education">Education</a>
+        <a href="#honors">Honors</a>
+        <a href="#contact">Contact</a>
+        <button id="themeToggle" class="btn" title="Toggle theme" aria-label="Toggle theme">🌓</button>
+      </nav>
+      <button class="btn mobile-toggle" aria-expanded="false" aria-controls="mobileMenu" onclick="toggleMenu()">Menu</button>
+    </div>
+    <div id="mobileMenu" class="container" hidden>
+      <nav class="list" style="padding:10px 0 14px">
+        <a href="#about" onclick="toggleMenu(false)">About</a>
+        <a href="#experience" onclick="toggleMenu(false)">Experience</a>
+        <a href="#publications" onclick="toggleMenu(false)">Publications</a>
+        <a href="#education" onclick="toggleMenu(false)">Education</a>
+        <a href="#honors" onclick="toggleMenu(false)">Honors</a>
+        <a href="#contact" onclick="toggleMenu(false)">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <main class="container grid">
-    <aside class="sidebar">
-      <section>
-        <h2>Skills</h2>
-        <ul class="tags">
-          <li>Python</li><li>Solidity</li><li>C</li><li>Bash</li><li>Haskell</li>
-          <li>Ethereum</li><li>Smart Contracts</li><li>GNU/Linux</li>
-          <li>Distributed Computing</li><li>Cloud Systems</li><li>Docker</li><li>ROS</li>
+  <main id="top" class="container">
+    <section class="hero">
+      <div>
+        <span class="kicker">Hello</span>
+        <h1>I build reliable software and research blockchain & distributed systems.</h1>
+        <p class="muted">Ph.D. in Computer Engineering. 12+ years across academia and industry. Skilled in Python, Solidity, ROS, and cloud-native systems.</p>
+        <div class="badges">
+          <span class="chip">Python</span><span class="chip">Solidity</span><span class="chip">Ethereum</span>
+          <span class="chip">Distributed Systems</span><span class="chip">Docker</span><span class="chip">GNU/Linux</span>
+        </div>
+        <div class="cta">
+          <a class="btn" href="#contact">Contact</a>
+          <a class="btn" href="assets/Alper_Alpermoglu_Resume.pdf" target="_blank" rel="noreferrer">Resume (PDF)</a>
+          <a class="btn" href="https://github.com/avatar-lavventura" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+      <div class="card">
+        <span class="tag">At a glance</span>
+        <ul class="glance">
+          <li><strong>Current:</strong> Actively seeking new opportunities (unemployed, job searching)</li>
+          <li><strong>Focus:</strong> Smart contracts, blockchain systems, distributed computing</li>
+          <li><strong>Based in:</strong> İstanbul, Türkiye</li>
         </ul>
-      </section>
+      </div>
+    </section>
 
-      <section>
-        <h2>Media</h2>
-        <ul>
-          <li><a href="https://www.youtube.com/watch?v=dgOml-blbwI" target="_blank" rel="noopener"><strong>Commencement Speech (2014)</strong></a><br>
-          Binghamton University – “Protect Our Dreams”</li>
-        </ul>
-      </section>
+    <section id="about" class="section">
+      <h2>About</h2>
+      <div class="card">
+        <p>I’m a researcher and software engineer with a strong publication record (SCI Q1/Q2) and hands-on engineering background. I enjoy building robust systems, collaborating across academia & industry, and publishing open-source work and papers.</p>
+      </div>
+    </section>
 
-      <section>
-        <h2>Honors &amp; Awards</h2>
-        <ul class="bullets">
-          <li><strong>Valedictorian &amp; Graduate Commencement Speaker</strong>, Binghamton Univ. (2014)</li>
-          <li><strong>Summa Cum Laude</strong>, B.Sc. in Information Systems (2012)</li>
-          <li><strong>Cisco University Prize</strong> Winner (2010)</li>
-          <li><strong>Dean’s List</strong> (multiple terms, ITU &amp; SUNY)</li>
-          <li><strong>Academic Achievement Award</strong>, SUNY Binghamton (GPA 3.98, 2012)</li>
-        </ul>
-      </section>
-    </aside>
+    <section id="experience" class="section">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="tl">
+          <div class="meta">Mar 2025 – Aug 2025 · İstanbul</div>
+          <div class="box">
+            <h3>Senior Python Developer — Huawei</h3>
+            <p class="muted">Developed blockchain-integrated software tools for telecom infrastructure. Optimized distributed systems for performance and scalability.</p>
+          </div>
+        </div>
+        <div class="tl">
+          <div class="meta">Feb 2025 – Jun 2025 · İstanbul</div>
+          <div class="box">
+            <h3>Part-time Lecturer — Boğaziçi University</h3>
+            <p class="muted">Taught “Functional Programming and Verification”.</p>
+          </div>
+        </div>
+        <div class="tl">
+          <div class="meta">Aug 2024 – Nov 2024 · İstanbul</div>
+          <div class="box">
+            <h3>Middleware Administrator — Anadolu Hayat Emeklilik</h3>
+          </div>
+        </div>
+        <div class="tl">
+          <div class="meta">Mar 2024 – Apr 2024 · İstanbul</div>
+          <div class="box">
+            <h3>Cloud Engineer — ICRON A.Ş.</h3>
+          </div>
+        </div>
+        <div class="tl">
+          <div class="meta">Aug 2012 – Jul 2015 · New York, USA</div>
+          <div class="box">
+            <h3>Research Project Assistant — Binghamton University (SUNY)</h3>
+            <ul class="muted">
+              <li>Smart Load Balancer: Echo State Network models for workload prediction in data centers.</li>
+              <li>b-ext4 file system: Hybrid SSD/HDD design to improve performance and reduce energy.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tl">
+          <div class="meta">2009 – 2010 · İstanbul</div>
+          <div class="box">
+            <h3>Internships — Cisco, Ericsson, ITU Robotics Lab</h3>
+            <p class="muted">Cisco University Prize-winning research intern. RoboCup 3D Simulation Team (ITU AI & Robotics Lab).</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <section class="content">
-      <section>
-        <h2>Summary</h2>
-        <p>Researcher and software engineer with 12+ years of experience in software development, blockchain systems, and distributed computing. Ph.D. in Computer Engineering (Boğaziçi University). Strong publication record (SCI Q1/Q2). Experienced in both academia (lecturer) and industry (Huawei, Cisco, Ericsson). Skilled in Python, Solidity, cloud engineering, and smart contracts.</p>
-        <button class="btn no-print" onclick="window.print()">Print / Save as PDF</button>
-      </section>
+    <section id="publications" class="section">
+      <h2>Publications</h2>
+      <div class="list">
+        <div class="item">
+          <div class="meta">May 2024 · Springer (SCI-E Q1)</div>
+          <div class="box">
+            <h3>An Autonomous Blockchain-Based Workflow Execution Broker for e-Science</h3>
+            <p class="muted">Cluster Computing. DOI: <a href="https://link.springer.com/article/10.1007/s10586-024-04534-z" target="_blank" rel="noreferrer">10.1007/s10586-024-04534-z</a></p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="meta">Mar 2024 · Wiley (SCI-E Q2)</div>
+          <div class="box">
+            <h3>An Autonomous Blockchain-Based Computational Broker for e-Science</h3>
+            <p class="muted">Concurrency and Computation: Practice and Experience. DOI: <a href="https://doi.org/10.1002/cpe.8087" target="_blank" rel="noreferrer">10.1002/cpe.8087</a></p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="meta">Oct 2017 · IEEE</div>
+          <div class="box">
+            <h3>Design of a Smart Contract Based Autonomous Organization for Sustainable Software</h3>
+            <p class="muted">IEEE 13th International Conference on e-Science. <a href="https://ieeexplore.ieee.org/document/8109181" target="_blank" rel="noreferrer">IEEE Xplore</a></p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="meta">Jul 2011</div>
+          <div class="box">
+            <h3>BeeStanbul Team Description Paper</h3>
+            <p class="muted">RoboCup Symposium Workshop. <a href="https://web.itu.edu.tr/sariel/publications/beeStanbul_TDP2011.pdf" target="_blank" rel="noreferrer">PDF</a></p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="meta">Jun 2025 · arXiv</div>
+          <div class="box">
+            <h3>EDGChain-E: A Decentralized Git-Based Framework for Versioning Encrypted Energy Data</h3>
+            <p class="muted"><a href="https://arxiv.org/pdf/2507.01615" target="_blank" rel="noreferrer">arXiv:2507.01615</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="card light">
+        <span class="tag">Talk</span>
+        <p>Valedictorian, Binghamton University Graduate Commencement (2014): <a href="https://www.youtube.com/watch?v=dgOml-blbwI" target="_blank" rel="noreferrer">“Protect Our Dreams”</a></p>
+      </div>
+    </section>
 
-      <section>
-        <h2>Experience</h2>
-        <article>
-          <h3>Senior Python Developer — Huawei</h3>
-          <div class="meta">Mar 2025 – Aug 2025 · Istanbul, Turkey</div>
-          <ul>
-            <li>Developed blockchain-integrated software tools for telecom infrastructure.</li>
-            <li>Optimized distributed systems for performance and scalability.</li>
-          </ul>
-        </article>
-
-        <article>
-          <h3>Part-time Lecturer — Boğaziçi University</h3>
-          <div class="meta">Feb 2025 – Jun 2025 · Istanbul, Turkey</div>
-          <ul>
-            <li>Taught “Functional Programming and Verification”.</li>
-          </ul>
-        </article>
-
-        <article>
-          <h3>Middleware Administrator — Anadolu Hayat Emeklilik</h3>
-          <div class="meta">Aug 2024 – Nov 2024 · Istanbul, Turkey</div>
-        </article>
-
-        <article>
-          <h3>Cloud Engineer — ICRON A.Ş.</h3>
-          <div class="meta">Mar 2024 – Apr 2024 · Istanbul, Turkey</div>
-        </article>
-
-        <article>
-          <h3>Research Project Assistant — Binghamton University (SUNY)</h3>
-          <div class="meta">Aug 2012 – Jul 2015 · NY, USA</div>
-          <ul>
-            <li><strong>Smart Load Balancer:</strong> Applied Echo State Network ML models for workload prediction in data centers.</li>
-            <li><strong>b-ext4 File System:</strong> Hybrid SSD/HDD design to optimize performance and reduce energy consumption.</li>
-          </ul>
-        </article>
-
-        <article>
-          <h3>Internships — Cisco, Ericsson, ITU Robotics Lab</h3>
-          <div class="meta">2009 – 2010 · Istanbul, Turkey</div>
-          <ul>
-            <li>Cisco University Prize-winning research intern.</li>
-            <li>RoboCup 3D Simulation Team (ITU AI & Robotics Lab).</li>
-          </ul>
-        </article>
-      </section>
-
-      <section>
-        <h2>Education</h2>
-        <article>
-          <h3>Ph.D. in Computer Engineering — Boğaziçi University</h3>
+    <section id="education" class="section">
+      <h2>Education</h2>
+      <div class="list">
+        <div class="item">
           <div class="meta">2016 – 2024</div>
-          <p>Thesis: <a href="https://www.dropbox.com/scl/fi/lhbjmslf6pao0cv0fvzuj/alper_alimoglu-phd-thesis.pdf?rlkey=uffv4ef8ccqvry55ii6p4iziv&dl=0" target="_blank" rel="noopener">EBlocBroker: Blockchain-based Computational Broker for e-Science</a><br>Advisor: Prof. Can Ozturan</p>
-        </article>
-        <article>
-          <h3>M.Sc. in Computer Science — Binghamton University (SUNY)</h3>
+          <div class="box">
+            <h3>Ph.D., Computer Engineering — Boğaziçi University (GPA 3.64/4.0)</h3>
+            <p class="muted">Thesis: EBlocBroker: Blockchain-based Computational Broker for e-Science (Advisor: Prof. Can Özturan)</p>
+            <p class="muted"><a href="https://www.dropbox.com/scl/fi/lhbjmslf6pao0cv0fvzuj/alper_alimoglu-phd-thesis.pdf?rlkey=uffv4ef8ccqvry55ii6p4iziv&dl=0" target="_blank" rel="noreferrer">Thesis PDF</a></p>
+          </div>
+        </div>
+        <div class="item">
           <div class="meta">2012 – 2014</div>
-          <p>Valedictorian. Thesis: <a href="https://www.dropbox.com/scl/fi/fv2ju3hvyrij3te9j6c5n/alper_alimoglu-master-thesis.pdf?rlkey=0dphs0xyvxpiygv9k81i8pzks&dl=0" target="_blank" rel="noopener">Short-Term Workload Prediction with Reservoir Computing</a><br>Advisor: Prof. Kanad Ghose</p>
-        </article>
-        <article>
-          <h3>B.Sc. in Information Systems — SUNY Binghamton & Istanbul Technical University</h3>
+          <div class="box">
+            <h3>M.Sc., Computer Science — Binghamton University (GPA 3.77, Valedictorian)</h3>
+            <p class="muted">Thesis: Short-Term Workload Prediction with Reservoir Computing (Advisor: Prof. Kanad Ghose)</p>
+            <p class="muted"><a href="https://www.dropbox.com/scl/fi/fv2ju3hvyrij3te9j6c5n/alper_alimoglu-master-thesis.pdf?rlkey=0dphs0xyvxpiygv9k81i8pzks&dl=0" target="_blank" rel="noreferrer">Thesis PDF</a></p>
+          </div>
+        </div>
+        <div class="item">
           <div class="meta">2008 – 2012</div>
-          <p>Summa Cum Laude.</p>
-        </article>
-      </section>
+          <div class="box">
+            <h3>B.Sc., Information Systems — SUNY Binghamton & Istanbul Technical University (GPA 3.89, Summa Cum Laude)</h3>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <section>
-        <h2>Publications</h2>
+    <section id="honors" class="section">
+      <h2>Honors & Awards</h2>
+      <div class="badges">
+        <span class="chip">Valedictorian (2014)</span>
+        <span class="chip">Summa Cum Laude</span>
+        <span class="chip">Cisco University Prize (2010)</span>
+        <span class="chip">Dean’s List (multiple)</span>
+        <span class="chip">Academic Achievement Award (2012)</span>
+      </div>
+    </section>
 
-        <h3>Journal Articles</h3>
-        <ul class="bullets">
-          <li>Alimoglu, A., Özturan, C. <strong>“An Autonomous Blockchain-Based Workflow Execution Broker for e-Science”</strong>, <em>Cluster Computing</em> (SCI-E Q1), May 2024. <a href="https://link.springer.com/article/10.1007/s10586-024-04534-z" target="_blank" rel="noopener">Link</a></li>
-          <li>Alimoglu, A., Özturan, C. <strong>“EBlocBroker: Blockchain-Based Computational Broker for e-Science”</strong>, <em>Concurrency and Computation: Practice and Experience</em> (SCI-E Q2), Mar 2024. <a href="https://doi.org/10.1002/cpe.8087" target="_blank" rel="noopener">DOI</a></li>
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="card">
+        <ul class="contact">
+          <li><strong>Email:</strong> <a href="mailto:alper.alimoglu@gmail.com">alper.alimoglu@gmail.com</a> <button class="btn small" onclick="copyEmail()">Copy</button></li>
+          <li><strong>GitHub:</strong> <a href="https://github.com/avatar-lavventura" target="_blank" rel="noreferrer">@avatar-lavventura</a></li>
+          <li><strong>Location:</strong> İstanbul, Türkiye</li>
         </ul>
-
-        <h3>Conference Papers</h3>
-        <ul class="bullets">
-          <li>Alimoglu, A., Özturan, C. <strong>“Design of a Smart Contract Based Autonomous Organization for Sustainable Software”</strong>, IEEE 13th Int’l Conf. on e-Science, Oct 2017. <a href="https://ieeexplore.ieee.org/document/8109181" target="_blank" rel="noopener">IEEE</a></li>
-          <li>Shahriar Asta, Tuna Sonmez, Onuralp Ulusoy, Alper Alimoglu, Mustafa Ersen, Ozdemir Sozmen, Sanem Sariel-Talay. <strong>“BeeStanbul Team Description Paper”</strong>, RoboCup Symposium Workshop, Istanbul, Jul 2011. <a href="https://web.itu.edu.tr/sariel/publications/beeStanbul_TDP2011.pdf" target="_blank" rel="noopener">PDF</a></li>
-        </ul>
-
-        <h3>Preprints &amp; Under Review</h3>
-        <ul class="bullets">
-          <li>Alimoglu, A., Erdayandi, K., Mustafa, M. A., Cali, Ü. <strong>“EDGChain-E: A Decentralized Git-Based Framework for Versioning Encrypted Energy Data”</strong>, arXiv preprint, Jun 2025. <a href="https://arxiv.org/pdf/2507.01615" target="_blank" rel="noopener">arXiv</a></li>
-          <li>Alimoglu, A., Özturan, C. <strong>“Blockchain Based Autonomous Organization for Sustainable Software and Execution History”</strong>, Submitted to <em>Blockchain: Research and Applications</em>, Dec 2024.</li>
-        </ul>
-      </section>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container small">
-      © <span id="y"></span> Alper Alimoğlu · Built for GitHub Pages
+  <footer>
+    <div class="container">
+      <p class="muted small">© 2025-08-31 Alper Alpermoğlu • Built with ❤️ and GitHub Pages</p>
     </div>
   </footer>
-
-<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
