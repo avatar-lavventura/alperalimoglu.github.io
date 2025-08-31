@@ -1,6 +1,6 @@
 # Personal Website — GitHub Pages
 
-This is a single-page personal website for **Alper (Ali) Alimoğlu**.
+This is a single-page personal website for **Alper Alimoğlu**.
 
 ## Quick Start (GitHub Pages)
 
@@ -15,7 +15,7 @@ This is a single-page personal website for **Alper (Ali) Alimoğlu**.
 
 - Open `index.html` and search for `TODO` if any appear, and update links (e.g., your GitHub username).
 - Replace `assets/avatar.svg` with your photo (keep the same filename or update the `<img>` src).
-- Your resume PDF is at `assets/Alper_Alimoglu_Resume.pdf` (copied from your upload).
+- Your resume PDF is at `resume.pdf` (copied from your upload).
 
 ## Tech
 
