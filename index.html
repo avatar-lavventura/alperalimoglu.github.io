@@ -1,239 +1,453 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" itemscope itemtype="https://schema.org/Person">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Alper Alimoglu — Personal Website</title>
-  <meta name="description" content="Blockchain & Distributed Systems Researcher — projects, publications, talks, and contact." />
-  <meta name="theme-color" content="#0ea5e9" />
-  <meta property="og:title" content="Alper Alimoglu — Personal Website"/>
-  <meta property="og:description" content="Blockchain & Distributed Systems Researcher — projects, publications, talks, and contact."/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:image" content="assets/avatar.svg"/>
-  <link rel="icon" href="assets/avatar.svg"/>
-  <link rel="preload" href="style.css" as="style"/>
-  <link rel="stylesheet" href="style.css"/>
-  <script defer src="script.js"></script>
-  <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "Person", "name": "Alper Alimoglu", "alternateName": "Alper", "jobTitle": "Researcher • Software Engineer", "email": "mailto:alper.alimoglu@gmail.com", "image": "assets/avatar.svg", "url": "https://your-username.github.io/", "sameAs": ["https://github.com/avatar-lavventura"]}
-  </script>
-  <style>/* tiny critical fixes for FOUC */ html{scroll-behavior:smooth}</style>
-</head>
-<body>
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="#top" aria-label="Home">
-        <img class="avatar" src="assets/avatar.svg" alt="AA avatar" width="44" height="44"/>
-        <div>
-          <strong itemprop="name">Alper Alimoglu</strong>
-          <div class="muted small">Blockchain & Distributed Systems • Python • Solidity</div>
-        </div>
-      </a>
-      <nav class="links" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#publications">Publications</a>
-        <a href="#education">Education</a>
-        <a href="#honors">Honors</a>
-        <a href="#contact">Contact</a>
-        <button id="themeToggle" class="btn" title="Toggle theme" aria-label="Toggle theme">🌓</button>
-      </nav>
-      <button class="btn mobile-toggle" aria-expanded="false" aria-controls="mobileMenu" onclick="toggleMenu()">Menu</button>
-    </div>
-    <div id="mobileMenu" class="container" hidden>
-      <nav class="list" style="padding:10px 0 14px">
-        <a href="#about" onclick="toggleMenu(false)">About</a>
-        <a href="#experience" onclick="toggleMenu(false)">Experience</a>
-        <a href="#publications" onclick="toggleMenu(false)">Publications</a>
-        <a href="#education" onclick="toggleMenu(false)">Education</a>
-        <a href="#honors" onclick="toggleMenu(false)">Honors</a>
-        <a href="#contact" onclick="toggleMenu(false)">Contact</a>
-      </nav>
-    </div>
-  </header>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Alper Alimoglu — Personal Website</title>
+		<meta
+			name="description"
+			content="Blockchain & Distributed Systems Researcher — projects, publications, talks, and contact."
+		/>
+		<meta name="theme-color" content="#0ea5e9" />
+		<meta property="og:title" content="Alper Alimoglu — Personal Website" />
+		<meta
+			property="og:description"
+			content="Blockchain & Distributed Systems Researcher — projects, publications, talks, and contact."
+		/>
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="assets/avatar.svg" />
+		<link rel="icon" href="assets/avatar.svg" />
+		<link rel="preload" href="style.css" as="style" />
+		<link rel="stylesheet" href="style.css" />
+		<script defer src="script.js"></script>
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Person",
+				"name": "Alper Alimoglu",
+				"alternateName": "Alper",
+				"jobTitle": "Researcher • Software Engineer",
+				"email": "mailto:alper.alimoglu@gmail.com",
+				"image": "assets/avatar.svg",
+				"url": "https://your-username.github.io/",
+				"sameAs": ["https://github.com/avatar-lavventura"]
+			}
+		</script>
+		<style>
+			/* tiny critical fixes for FOUC */
+			html {
+				scroll-behavior: smooth;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="container nav">
+				<a class="brand" href="#top" aria-label="Home">
+					<img
+						class="avatar"
+						src="assets/avatar.svg"
+						alt="AA avatar"
+						width="44"
+						height="44"
+					/>
+					<div>
+						<strong itemprop="name">Alper Alimoglu</strong>
+						<div class="muted small">
+							Blockchain & Distributed Systems • Python • Solidity
+						</div>
+					</div>
+				</a>
+				<nav class="links" aria-label="Primary">
+					<a href="#about">About</a>
+					<a href="#experience">Experience</a>
+					<a href="#publications">Publications</a>
+					<a href="#education">Education</a>
+					<a href="#honors">Honors</a>
+					<a href="#contact">Contact</a>
+					<button
+						id="themeToggle"
+						class="btn"
+						title="Toggle theme"
+						aria-label="Toggle theme"
+					>
+						🌓
+					</button>
+				</nav>
+				<button
+					class="btn mobile-toggle"
+					aria-expanded="false"
+					aria-controls="mobileMenu"
+					onclick="toggleMenu()"
+				>
+					Menu
+				</button>
+			</div>
+			<div id="mobileMenu" class="container" hidden>
+				<nav class="list" style="padding: 10px 0 14px">
+					<a href="#about" onclick="toggleMenu(false)">About</a>
+					<a href="#experience" onclick="toggleMenu(false)">Experience</a>
+					<a href="#publications" onclick="toggleMenu(false)">Publications</a>
+					<a href="#education" onclick="toggleMenu(false)">Education</a>
+					<a href="#honors" onclick="toggleMenu(false)">Honors</a>
+					<a href="#contact" onclick="toggleMenu(false)">Contact</a>
+				</nav>
+			</div>
+		</header>
 
-  <main id="top" class="container">
-    <section class="hero">
-      <div>
-        <span class="kicker">Hello</span>
-        <h1>I build reliable software and research blockchain & distributed systems.</h1>
-        <p class="muted">Ph.D. in Computer Engineering. 12+ years across academia and industry. Skilled in Python, Solidity, ROS, and cloud-native systems.</p>
-        <div class="badges">
-          <span class="chip">Python</span><span class="chip">Solidity</span><span class="chip">Ethereum</span>
-          <span class="chip">Distributed Systems</span><span class="chip">Docker</span><span class="chip">GNU/Linux</span>
-        </div>
-        <div class="cta">
-          <a class="btn" href="#contact">Contact</a>
-          <a class="btn" href="assets/Alper_Alpermoglu_Resume.pdf" target="_blank" rel="noreferrer">Resume (PDF)</a>
-          <a class="btn" href="https://github.com/avatar-lavventura" target="_blank" rel="noreferrer">GitHub</a>
-        </div>
-      </div>
-      <div class="card">
-        <span class="tag">At a glance</span>
-        <ul class="glance">
-          <li><strong>Current:</strong> Actively seeking new opportunities (unemployed, job searching)</li>
-          <li><strong>Focus:</strong> Smart contracts, blockchain systems, distributed computing</li>
-          <li><strong>Based in:</strong> İstanbul, Türkiye</li>
-        </ul>
-      </div>
-    </section>
+		<main id="top" class="container">
+			<section class="hero">
+				<div>
+					<span class="kicker">Hello</span>
+					<h1>
+						I build reliable software and research blockchain & distributed
+						systems.
+					</h1>
+					<p class="muted">
+						Ph.D. in Computer Engineering. 12+ years across academia and
+						industry. Skilled in Python, Solidity, and cloud-native systems.
+					</p>
+					<div class="badges">
+						<span class="chip">Python</span><span class="chip">Solidity</span
+						><span class="chip">Ethereum</span>
+						<span class="chip">Distributed Systems</span
+						><span class="chip">Docker</span><span class="chip">GNU/Linux</span>
+					</div>
+					<div class="cta">
+						<a class="btn" href="#contact">Contact</a>
+						<a
+							class="btn"
+							href="assets/Alper_Alpermoglu_Resume.pdf"
+							target="_blank"
+							rel="noreferrer"
+							>Resume (PDF)</a
+						>
+						<a
+							class="btn"
+							href="https://github.com/avatar-lavventura"
+							target="_blank"
+							rel="noreferrer"
+							>GitHub</a
+						>
+					</div>
+				</div>
+				<div class="card">
+					<span class="tag">At a glance</span>
+					<ul class="glance">
+						<li>
+							<strong>Current:</strong> Actively seeking new opportunities
+							(unemployed, job searching)
+						</li>
+						<li>
+							<strong>Focus:</strong> Smart contracts, blockchain systems,
+							distributed computing
+						</li>
+						<li><strong>Based in:</strong> İstanbul, Türkiye</li>
+					</ul>
+				</div>
+			</section>
 
-    <section id="about" class="section">
-      <h2>About</h2>
-      <div class="card">
-        <p>I’m a researcher and software engineer with a strong publication record (SCI Q1/Q2) and hands-on engineering background. I enjoy building robust systems, collaborating across academia & industry, and publishing open-source work and papers.</p>
-      </div>
-    </section>
+			<section id="about" class="section">
+				<h2>About</h2>
+				<div class="card">
+					<p>
+						I’m a researcher and software engineer with a strong publication
+						record (SCI Q1/Q2) and hands-on engineering background. I enjoy
+						building robust systems, collaborating across academia & industry,
+						and publishing open-source work and papers.
+					</p>
+				</div>
+			</section>
 
-    <section id="experience" class="section">
-      <h2>Experience</h2>
-      <div class="timeline">
-        <div class="tl">
-          <div class="meta">Mar 2025 – Aug 2025 · İstanbul</div>
-          <div class="box">
-            <h3>Senior Python Developer — Huawei</h3>
-            <p class="muted">Developed blockchain-integrated software tools for telecom infrastructure. Optimized distributed systems for performance and scalability.</p>
-          </div>
-        </div>
-        <div class="tl">
-          <div class="meta">Feb 2025 – Jun 2025 · İstanbul</div>
-          <div class="box">
-            <h3>Part-time Lecturer — Boğaziçi University</h3>
-            <p class="muted">Taught “Functional Programming and Verification”.</p>
-          </div>
-        </div>
-        <div class="tl">
-          <div class="meta">Aug 2024 – Nov 2024 · İstanbul</div>
-          <div class="box">
-            <h3>Middleware Administrator — Anadolu Hayat Emeklilik</h3>
-          </div>
-        </div>
-        <div class="tl">
-          <div class="meta">Mar 2024 – Apr 2024 · İstanbul</div>
-          <div class="box">
-            <h3>Cloud Engineer — ICRON A.Ş.</h3>
-          </div>
-        </div>
-        <div class="tl">
-          <div class="meta">Aug 2012 – Jul 2015 · New York, USA</div>
-          <div class="box">
-            <h3>Research Project Assistant — Binghamton University (SUNY)</h3>
-            <ul class="muted">
-              <li>Smart Load Balancer: Echo State Network models for workload prediction in data centers.</li>
-              <li>b-ext4 file system: Hybrid SSD/HDD design to improve performance and reduce energy.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="tl">
-          <div class="meta">2009 – 2010 · İstanbul</div>
-          <div class="box">
-            <h3>Internships — Cisco, Ericsson, ITU Robotics Lab</h3>
-            <p class="muted">Cisco University Prize-winning research intern. RoboCup 3D Simulation Team (ITU AI & Robotics Lab).</p>
-          </div>
-        </div>
-      </div>
-    </section>
+			<section id="experience" class="section">
+				<h2>Experience</h2>
+				<div class="timeline">
+					<div class="tl">
+						<div class="meta">Mar 2025 – Aug 2025 · İstanbul</div>
+						<div class="box">
+							<h3>Senior Python Developer — Huawei</h3>
+							<p class="muted">
+								Developed blockchain-integrated software tools for telecom
+								infrastructure. Optimized distributed systems for performance
+								and scalability.
+							</p>
+						</div>
+					</div>
+					<div class="tl">
+						<div class="meta">Feb 2025 – Jun 2025 · İstanbul</div>
+						<div class="box">
+							<h3>Part-time Lecturer — Boğaziçi University</h3>
+							<p class="muted">
+								Taught “Functional Programming and Verification”.
+							</p>
+						</div>
+					</div>
+					<div class="tl">
+						<div class="meta">Aug 2024 – Nov 2024 · İstanbul</div>
+						<div class="box">
+							<h3>Middleware Administrator — Anadolu Hayat Emeklilik</h3>
+						</div>
+					</div>
+					<div class="tl">
+						<div class="meta">Mar 2024 – Apr 2024 · İstanbul</div>
+						<div class="box">
+							<h3>Cloud Engineer — ICRON A.Ş.</h3>
+						</div>
+					</div>
+					<div class="tl">
+						<div class="meta">Aug 2012 – Jul 2015 · New York, USA</div>
+						<div class="box">
+							<h3>Research Project Assistant — Binghamton University (SUNY)</h3>
+							<ul class="muted">
+								<li>
+									Smart Load Balancer: Echo State Network models for workload
+									prediction in data centers.
+								</li>
+								<li>
+									b-ext4 file system: Hybrid SSD/HDD design to improve
+									performance and reduce energy.
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tl">
+						<div class="meta">2009 – 2010 · İstanbul</div>
+						<div class="box">
+							<h3>Internships — Cisco, Ericsson, ITU Robotics Lab</h3>
+							<p class="muted">
+								Cisco University Prize-winning research intern. RoboCup 3D
+								Simulation Team (ITU AI & Robotics Lab).
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
 
-    <section id="publications" class="section">
-      <h2>Publications</h2>
-      <div class="list">
-        <div class="item">
-          <div class="meta">May 2024 · Springer (SCI-E Q1)</div>
-          <div class="box">
-            <h3>An Autonomous Blockchain-Based Workflow Execution Broker for e-Science</h3>
-            <p class="muted">Cluster Computing. DOI: <a href="https://link.springer.com/article/10.1007/s10586-024-04534-z" target="_blank" rel="noreferrer">10.1007/s10586-024-04534-z</a></p>
-          </div>
-        </div>
-        <div class="item">
-          <div class="meta">Mar 2024 · Wiley (SCI-E Q2)</div>
-          <div class="box">
-            <h3>An Autonomous Blockchain-Based Computational Broker for e-Science</h3>
-            <p class="muted">Concurrency and Computation: Practice and Experience. DOI: <a href="https://doi.org/10.1002/cpe.8087" target="_blank" rel="noreferrer">10.1002/cpe.8087</a></p>
-          </div>
-        </div>
-        <div class="item">
-          <div class="meta">Oct 2017 · IEEE</div>
-          <div class="box">
-            <h3>Design of a Smart Contract Based Autonomous Organization for Sustainable Software</h3>
-            <p class="muted">IEEE 13th International Conference on e-Science. <a href="https://ieeexplore.ieee.org/document/8109181" target="_blank" rel="noreferrer">IEEE Xplore</a></p>
-          </div>
-        </div>
-        <div class="item">
-          <div class="meta">Jul 2011</div>
-          <div class="box">
-            <h3>BeeStanbul Team Description Paper</h3>
-            <p class="muted">RoboCup Symposium Workshop. <a href="https://web.itu.edu.tr/sariel/publications/beeStanbul_TDP2011.pdf" target="_blank" rel="noreferrer">PDF</a></p>
-          </div>
-        </div>
-        <div class="item">
-          <div class="meta">Jun 2025 · arXiv</div>
-          <div class="box">
-            <h3>EDGChain-E: A Decentralized Git-Based Framework for Versioning Encrypted Energy Data</h3>
-            <p class="muted"><a href="https://arxiv.org/pdf/2507.01615" target="_blank" rel="noreferrer">arXiv:2507.01615</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="card light">
-        <span class="tag">Talk</span>
-        <p>Valedictorian, Binghamton University Graduate Commencement (2014): <a href="https://www.youtube.com/watch?v=dgOml-blbwI" target="_blank" rel="noreferrer">“Protect Our Dreams”</a></p>
-      </div>
-    </section>
+			<section id="publications" class="section">
+				<h2>Publications</h2>
+				<div class="list">
+					<div class="item">
+						<div class="meta">May 2024 · Springer (SCI-E Q1)</div>
+						<div class="box">
+							<h3>
+								An Autonomous Blockchain-Based Workflow Execution Broker for
+								e-Science
+							</h3>
+							<p class="muted">
+								Cluster Computing. DOI:
+								<a
+									href="https://link.springer.com/article/10.1007/s10586-024-04534-z"
+									target="_blank"
+									rel="noreferrer"
+									>10.1007/s10586-024-04534-z</a
+								>
+							</p>
+						</div>
+					</div>
+					<div class="item">
+						<div class="meta">Mar 2024 · Wiley (SCI-E Q2)</div>
+						<div class="box">
+							<h3>
+								An Autonomous Blockchain-Based Computational Broker for
+								e-Science
+							</h3>
+							<p class="muted">
+								Concurrency and Computation: Practice and Experience. DOI:
+								<a
+									href="https://doi.org/10.1002/cpe.8087"
+									target="_blank"
+									rel="noreferrer"
+									>10.1002/cpe.8087</a
+								>
+							</p>
+						</div>
+					</div>
+					<div class="item">
+						<div class="meta">Oct 2017 · IEEE</div>
+						<div class="box">
+							<h3>
+								Design of a Smart Contract Based Autonomous Organization for
+								Sustainable Software
+							</h3>
+							<p class="muted">
+								IEEE 13th International Conference on e-Science.
+								<a
+									href="https://ieeexplore.ieee.org/document/8109181"
+									target="_blank"
+									rel="noreferrer"
+									>IEEE Xplore</a
+								>
+							</p>
+						</div>
+					</div>
+					<div class="item">
+						<div class="meta">Jul 2011</div>
+						<div class="box">
+							<h3>BeeStanbul Team Description Paper</h3>
+							<p class="muted">
+								RoboCup Symposium Workshop.
+								<a
+									href="https://web.itu.edu.tr/sariel/publications/beeStanbul_TDP2011.pdf"
+									target="_blank"
+									rel="noreferrer"
+									>PDF</a
+								>
+							</p>
+						</div>
+					</div>
+					<div class="item">
+						<div class="meta">Jun 2025 · arXiv</div>
+						<div class="box">
+							<h3>
+								EDGChain-E: A Decentralized Git-Based Framework for Versioning
+								Encrypted Energy Data
+							</h3>
+							<p class="muted">
+								<a
+									href="https://arxiv.org/pdf/2507.01615"
+									target="_blank"
+									rel="noreferrer"
+									>arXiv:2507.01615</a
+								>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="card light">
+					<span class="tag">Talk</span>
+					<p>
+						Valedictorian, Binghamton University Graduate Commencement (2014):
+						<a
+							href="https://www.youtube.com/watch?v=dgOml-blbwI"
+							target="_blank"
+							rel="noreferrer"
+							>“Protect Our Dreams”</a
+						>
+					</p>
+				</div>
+			</section>
 
-    <section id="education" class="section">
-      <h2>Education</h2>
-      <div class="list">
-        <div class="item">
-          <div class="meta">2016 – 2024</div>
-          <div class="box">
-            <h3>Ph.D., Computer Engineering — Boğaziçi University (GPA 3.64/4.0)</h3>
-            <p class="muted">Thesis: EBlocBroker: Blockchain-based Computational Broker for e-Science (Advisor: Prof. Can Özturan)</p>
-            <p class="muted"><a href="https://www.dropbox.com/scl/fi/lhbjmslf6pao0cv0fvzuj/alper_alimoglu-phd-thesis.pdf?rlkey=uffv4ef8ccqvry55ii6p4iziv&dl=0" target="_blank" rel="noreferrer">Thesis PDF</a></p>
-          </div>
-        </div>
-        <div class="item">
-          <div class="meta">2012 – 2014</div>
-          <div class="box">
-            <h3>M.Sc., Computer Science — Binghamton University (GPA 3.77, Valedictorian)</h3>
-            <p class="muted">Thesis: Short-Term Workload Prediction with Reservoir Computing (Advisor: Prof. Kanad Ghose)</p>
-            <p class="muted"><a href="https://www.dropbox.com/scl/fi/fv2ju3hvyrij3te9j6c5n/alper_alimoglu-master-thesis.pdf?rlkey=0dphs0xyvxpiygv9k81i8pzks&dl=0" target="_blank" rel="noreferrer">Thesis PDF</a></p>
-          </div>
-        </div>
-        <div class="item">
-          <div class="meta">2008 – 2012</div>
-          <div class="box">
-            <h3>B.Sc., Information Systems — SUNY Binghamton & Istanbul Technical University (GPA 3.89, Summa Cum Laude)</h3>
-          </div>
-        </div>
-      </div>
-    </section>
+			<section id="education" class="section">
+				<h2>Education</h2>
+				<div class="list">
+					<div class="item">
+						<div class="meta">2016 – 2024</div>
+						<div class="box">
+							<h3>
+								Ph.D., Computer Engineering — Boğaziçi University (GPA 3.64/4.0)
+							</h3>
+							<p class="muted">
+								Thesis: EBlocBroker: Blockchain-based Computational Broker for
+								e-Science (Advisor: Prof. Can Özturan)
+							</p>
+							<p class="muted">
+								<a
+									href="https://www.dropbox.com/scl/fi/lhbjmslf6pao0cv0fvzuj/alper_alimoglu-phd-thesis.pdf?rlkey=uffv4ef8ccqvry55ii6p4iziv&dl=0"
+									target="_blank"
+									rel="noreferrer"
+									>Thesis PDF</a
+								>
+							</p>
+						</div>
+					</div>
+					<div class="item">
+						<div class="meta">2012 – 2014</div>
+						<div class="box">
+							<h3>
+								M.Sc., Computer Science — Binghamton University (GPA 3.77,
+								Valedictorian)
+							</h3>
+							<p class="muted">
+								Thesis: Short-Term Workload Prediction with Reservoir Computing
+								(Advisor: Prof. Kanad Ghose)
+							</p>
+							<p class="muted">
+								<a
+									href="https://www.dropbox.com/scl/fi/fv2ju3hvyrij3te9j6c5n/alper_alimoglu-master-thesis.pdf?rlkey=0dphs0xyvxpiygv9k81i8pzks&dl=0"
+									target="_blank"
+									rel="noreferrer"
+									>Thesis PDF</a
+								>
+							</p>
+						</div>
+					</div>
+					<div class="item">
+						<div class="meta">2008 – 2012</div>
+						<div class="box">
+							<h3>
+								B.Sc., Information Systems — SUNY Binghamton & Istanbul
+								Technical University (GPA 3.89, Summa Cum Laude)
+							</h3>
+						</div>
+					</div>
+				</div>
+			</section>
 
-    <section id="honors" class="section">
-      <h2>Honors & Awards</h2>
-      <div class="badges">
-        <span class="chip">Valedictorian (2014)</span>
-        <span class="chip">Summa Cum Laude</span>
-        <span class="chip">Cisco University Prize (2010)</span>
-        <span class="chip">Dean’s List (multiple)</span>
-        <span class="chip">Academic Achievement Award (2012)</span>
-      </div>
-    </section>
+			<section id="honors" class="section">
+				<h2>Honors & Awards</h2>
+				<div class="badges">
+					<span class="chip">Valedictorian (2014)</span>
+					<span class="chip">Summa Cum Laude</span>
+					<span class="chip">Cisco University Prize (2010)</span>
+					<span class="chip">Dean’s List (multiple)</span>
+					<span class="chip">Academic Achievement Award (2012)</span>
+				</div>
+			</section>
 
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <div class="card">
-        <ul class="contact">
-          <li><strong>Email:</strong> <a href="mailto:alper.alimoglu@gmail.com">alper.alimoglu@gmail.com</a> <button class="btn small" onclick="copyEmail()">Copy</button></li>
-          <li><strong>GitHub:</strong> <a href="https://github.com/avatar-lavventura" target="_blank" rel="noreferrer">@avatar-lavventura</a></li>
-          <li><strong>Location:</strong> İstanbul, Türkiye</li>
-        </ul>
-      </div>
-    </section>
-  </main>
+			<section id="contact" class="section">
+				<h2>Contact</h2>
+				<div class="card">
+					<ul class="contact">
+						<li>
+							<strong>Email:</strong>
+							<a href="mailto:alper.alimoglu@gmail.com"
+								>alper.alimoglu@gmail.com</a
+							>
+							<button class="btn small" onclick="copyEmail()">Copy</button>
+						</li>
+						<li>
+							<strong>GitHub:</strong>
+							<a
+								class="btn"
+								href="https://github.com/avatar-lavventura"
+								target="_blank"
+								rel="noopener"
+								>@avatar-lavventura</a
+							>
+						</li>
+						<li>
+							<strong>Stack Overflow:</strong>
+							<a
+								class="btn"
+								href="https://stackoverflow.com/users/2402577/alper"
+								target="_blank"
+								rel="noopener"
+							>
+								alper
+							</a>
+						</li>
+						<li>
+							<strong>LinkedIn</strong>:
+							<a
+								class="btn"
+								href="https://www.linkedin.com/in/alper-alimoglu-ph-d-a530084a/"
+								target="_blank"
+								rel="noopener"
+								>Alper Alimoglu</a
+							>
+						</li>
+						<li><strong>Location:</strong> İstanbul, Türkiye</li>
+					</ul>
+				</div>
+			</section>
+		</main>
 
-  <footer>
-    <div class="container">
-      <p class="muted small">© 2025-08-31 Alper Alpermoğlu • Built with ❤️ and GitHub Pages</p>
-    </div>
-  </footer>
-</body>
+		<footer>
+			<div class="container">
+				<p class="muted small">
+					© 2025-08-31 Alper Alpermoğlu • Built with ❤️ and GitHub Pages
+				</p>
+			</div>
+		</footer>
+	</body>
 </html>
