@@ -47,14 +47,14 @@ body {
 }
 
 .nav a {
-    color: #333;
+    color: #0066cc;
     text-decoration: underline;
     font-weight: normal;
-    font-size: 0.9em;
+    font-size: 1.1em;
 }
 
 .nav a:hover {
-    color: #666;
+    color: #004499;
 }
 
 /* Main content */
