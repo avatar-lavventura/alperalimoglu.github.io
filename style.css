@@ -156,9 +156,39 @@ footer {
 }
 
 /* Responsive design */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     body {
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    .container {
         padding: 15px;
+        margin: 5px auto;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 0 20px;
+    }
+    
+    .header-name {
+        font-size: 1.5em;
+        margin-bottom: 0;
+    }
+    
+    .nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: flex-start;
+    }
+    
+    .nav a {
+        font-size: 1em;
+        padding: 5px 0;
     }
     
     h1 {
@@ -166,11 +196,86 @@ footer {
     }
     
     h2 {
-        font-size: 1.2em;
+        font-size: 1.3em;
+    }
+    
+    h3 {
+        font-size: 1em;
+    }
+    
+    .subtitle {
+        font-size: 0.9em;
+        line-height: 1.4;
+    }
+    
+    .publication-item,
+    .experience-item,
+    .education-item,
+    .honor-item {
+        padding: 12px;
+        margin: 12px 0;
+    }
+    
+    .research-areas {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .publication-links a,
+    .thesis-link,
+    .talk-link {
+        font-size: 0.8em;
+        padding: 5px 10px;
+        margin: 3px 5px 3px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+    
+    .container {
+        padding: 10px;
+        margin: 2px auto;
+    }
+    
+    .header-content {
+        padding: 0 10px;
     }
     
     .nav {
-        flex-direction: column;
         gap: 10px;
+    }
+    
+    .nav a {
+        font-size: 0.9em;
+    }
+    
+    h1 {
+        font-size: 1.6em;
+    }
+    
+    h2 {
+        font-size: 1.2em;
+    }
+    
+    .subtitle {
+        font-size: 0.85em;
+    }
+    
+    .publication-item,
+    .experience-item,
+    .education-item,
+    .honor-item {
+        padding: 10px;
+        margin: 10px 0;
+    }
+    
+    .publication-meta,
+    .experience-meta,
+    .education-meta,
+    .honor-meta {
+        font-size: 0.8em;
     }
 }
