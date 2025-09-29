@@ -157,11 +157,12 @@ h3, .experience-item h3, .education-item h3, .honor-item h3, .publication-item h
     font-style: italic;
 }
 
-/* Academic list styling for experience, education, honors, and theses */
+/* Academic list styling for experience, education, honors, theses, and research areas */
 .experience-list,
 .education-list,
 .honor-list,
-.thesis-list {
+.thesis-list,
+.research-areas-list {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -170,7 +171,8 @@ h3, .experience-item h3, .education-item h3, .honor-item h3, .publication-item h
 .experience-list li,
 .education-list li,
 .honor-list li,
-.thesis-list li {
+.thesis-list li,
+.research-areas-list li {
     margin: 12px 0;
     line-height: 1.4;
     padding: 0;
@@ -179,7 +181,8 @@ h3, .experience-item h3, .education-item h3, .honor-item h3, .publication-item h
 .experience-list li strong,
 .education-list li strong,
 .honor-list li strong,
-.thesis-list li strong {
+.thesis-list li strong,
+.research-areas-list li strong {
     color: #000000 !important;
     font-weight: bold;
 }
@@ -189,6 +192,7 @@ h3, .experience-item h3, .education-item h3, .honor-item h3, .publication-item h
 .education-list strong,
 .honor-list strong,
 .thesis-list strong,
+.research-areas-list strong,
 .publication-list strong {
     color: #000000 !important;
     font-weight: bold;
@@ -197,7 +201,8 @@ h3, .experience-item h3, .education-item h3, .honor-item h3, .publication-item h
 .experience-description,
 .education-description,
 .honor-description,
-.thesis-description {
+.thesis-description,
+.research-area-description {
     margin: 6px 0 0 20px;
     font-size: 0.9em;
     color: #333;
@@ -259,6 +264,34 @@ h3, .experience-item h3, .education-item h3, .honor-item h3, .publication-item h
 /* Sections */
 .home {
     margin-bottom: 2em;
+}
+
+/* Section separators */
+h2 {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    margin-top: 30px;
+}
+
+h2:first-of-type {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+/* Header Avatar */
+.header-name-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #0066cc;
+    flex-shrink: 0;
 }
 
 .news {
@@ -409,5 +442,10 @@ footer {
     .education-meta,
     .honor-meta {
         font-size: 0.8em;
+    }
+    
+    .header-avatar {
+        width: 35px;
+        height: 35px;
     }
 }
