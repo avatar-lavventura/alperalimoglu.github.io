@@ -115,6 +115,114 @@ h3, .experience-item h3, .education-item h3, .honor-item h3, .publication-item h
     font-weight: bold !important;
 }
 
+/* Academic publication list styling */
+.publication-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.publication-list li {
+    margin: 12px 0;
+    line-height: 1.4;
+    padding: 0;
+}
+
+.publication-list li strong a {
+    color: #0066cc;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.publication-list li strong a:hover {
+    color: #004499;
+    text-decoration: underline;
+}
+
+.publication-list li em {
+    font-style: italic;
+    color: #333;
+}
+
+.publication-description {
+    margin: 6px 0 0 20px;
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.3;
+    font-style: italic;
+}
+
+/* Academic list styling for experience, education, and honors */
+.experience-list,
+.education-list,
+.honor-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.experience-list li,
+.education-list li,
+.honor-list li {
+    margin: 12px 0;
+    line-height: 1.4;
+    padding: 0;
+}
+
+.experience-list li strong,
+.education-list li strong,
+.honor-list li strong {
+    color: #0066cc;
+    font-weight: bold;
+}
+
+.experience-description,
+.education-description,
+.honor-description {
+    margin: 6px 0 0 20px;
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.3;
+    font-style: italic;
+}
+
+.thesis-link,
+.talk-link {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.thesis-link:hover,
+.talk-link:hover {
+    color: #004499;
+    text-decoration: underline;
+}
+
+/* Compact experience, education, and honor items */
+.experience-item,
+.education-item,
+.honor-item {
+    padding: 8px 12px;
+    margin: 8px 0;
+    line-height: 1.3;
+}
+
+.experience-item h3,
+.education-item h3,
+.honor-item h3 {
+    margin: 0 0 4px 0;
+    font-size: 1em;
+}
+
+.experience-meta,
+.education-meta,
+.honor-meta {
+    font-size: 0.85em;
+    margin: 4px 0;
+    line-height: 1.2;
+}
+
 .publication-item h3 a {
     color: #0066cc !important;
     font-weight: bold !important;
