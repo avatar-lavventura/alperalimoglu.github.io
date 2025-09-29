@@ -15,7 +15,8 @@ This is a single-page personal website for **Alper Alimoğlu**.
 
 - Open `index.html` and search for `TODO` if any appear, and update links (e.g., your GitHub username).
 - Replace `assets/avatar.svg` with your photo (keep the same filename or update the `<img>` src).
-- Your resume PDF is at `resume.pdf` (copied from your upload).
+- Your resume PDF is at `assets/resume.pdf` (copied from your upload).
+- All PDF files are organized in the `assets/` folder.
 
 ## Tech
 
