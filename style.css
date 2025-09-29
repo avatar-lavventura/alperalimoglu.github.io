@@ -1,58 +1,161 @@
-:root{ --bg:#0b1020; --bg2:#0f172a; --card:#0b1225; --text:#e5e7eb;
---muted:#94a3b8; --brand:#0ea5e9; --ring:rgba(14,165,233,.35); --shadow: 0 10px
-25px rgba(0,0,0,.35); } [data-theme="light"]{--bg:#ffffff; --bg2:#f8fafc;
---card:#ffffff; --text:#0f172a; --muted:#475569; --brand:#0ea5e9;
---ring:rgba(14,165,233,.35)} *{box-sizing:border-box} html,body{height:100%}
-body{margin:0; font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
-Cantarell, Noto Sans, Helvetica Neue, Arial; color:var(--text);
-background:radial-gradient(1200px 600px at 10% -10%, rgba(34,211,238,.12),
-transparent), radial-gradient(1000px 500px at 120% 10%, rgba(14,165,233,.14),
-transparent), linear-gradient(180deg, var(--bg), var(--bg2));} a{color:inherit;
-text-decoration:none} .container{max-width:1040px; margin:0 auto; padding:24px}
-.site-header{position:sticky; top:0; backdrop-filter:saturate(160%) blur(8px);
-background:color-mix(in oklab, var(--bg) 70%, transparent); border-bottom:1px
-solid color-mix(in oklab, var(--muted) 30%, transparent); z-index:50}
-.nav{display:flex; align-items:center; justify-content:space-between; gap:16px}
-.brand{display:flex; align-items:center; gap:14px} .avatar{width:44px;
-height:44px; border-radius:12px; box-shadow:var(--shadow)} .links{display:flex;
-gap:18px; align-items:center} .btn{display:inline-flex; align-items:center;
-gap:8px; padding:10px 14px; border-radius:12px;
-background:linear-gradient(135deg, rgba(14,165,233,.15), rgba(34,211,238,.12));
-border:1px solid rgba(14,165,233,.35); cursor:pointer} .btn.small{padding:6px
-10px; font-size:12px} .btn:focus{outline:4px solid var(--ring)}
-.mobile-toggle{display:none} .hero{display:grid; grid-template-columns:1.45fr
-.9fr; gap:28px; padding:48px 0 8px} .hero h1{font-size:42px; line-height:1.1;
-margin:6px 0 12px} .muted{color:var(--muted)} .small{font-size:12px}
-.badges{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px}
-.chip{display:inline-flex; align-items:center; gap:6px; padding:6px 10px;
-border-radius:999px; background:rgba(148,163,184,.1); border:1px solid
-rgba(148,163,184,.25); font:500 12px/1.2 system-ui; color:var(--muted)}
-.card{background:linear-gradient(180deg, color-mix(in oklab, white 4%,
-transparent), color-mix(in oklab, white 2%, transparent)); border:1px solid
-color-mix(in oklab, var(--muted) 25%, transparent); border-radius:18px;
-padding:18px; box-shadow:var(--shadow)} .tag{display:inline-block; padding:6px
-10px; border-radius:999px; font:600 12px/1 system-ui; color:#0ea5e9;
-background:rgba(14,165,233,.12); border:1px solid rgba(14,165,233,.3)}
-.glance{margin:12px 0 0; padding-left:18px} .section{padding:28px 0} .section
-h2{font-size:22px; margin:0 0 14px} .list{display:grid; gap:12px}
-.item{display:flex; gap:12px} .item .meta{min-width:170px; color:var(--muted);
-font:600 12px/1.4 system-ui} .item .box{flex:1} .item h3{margin:0 0 4px;
-font-size:16px} .timeline{position:relative}
-.timeline::before{content:"";position:absolute;left:145px;top:0;bottom:0;width:2px;background:color-mix(in
-oklab, var(--muted) 25%, transparent)}
-.tl{display:grid;grid-template-columns:160px 1fr;gap:16px; align-items:start}
-.tl + .tl{margin-top:12px} .contact{list-style:none; padding:0; margin:0;
-display:grid; gap:12px} .cta{margin-top:16px; display:flex; gap:10px;
-flex-wrap:wrap} footer{padding:40px 0 60px; color:var(--muted);
-text-align:center} @media (max-width:900px){ .hero{grid-template-columns:1fr}
-.links{display:none} .mobile-toggle{display:inline-flex} .item
-.meta{min-width:120px} .timeline::before{left:120px}
-.tl{grid-template-columns:130px 1fr} } /* --- Protect Our Dreams: vurgulu link
---- */ .section .card p a.highlight-link { color: var(--brand) !important;
-font-weight: 700; text-decoration: underline !important; text-underline-offset:
-2px; text-decoration-thickness: 2px; } .section .card p a.highlight-link:hover {
-text-decoration-thickness: 3px; filter: brightness(0.9); } /* --- CTA'daki
-accent buton --- */ .btn-accent { background: var(--brand); color: #fff;
-font-weight: 700; border: 2px solid var(--brand); transition: background-color
-.25s, color .25s, border-color .25s; } .btn-accent:hover { background:
-transparent; color: var(--brand); border-color: var(--brand); }
+/* Academic Website Styles - Inspired by aahmetoglu.com */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 40px;
+}
+
+/* Header and Navigation */
+.header {
+    background-color: #fff;
+    color: #333;
+    padding: 20px 0;
+    margin-bottom: 2em;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-name {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    color: #333;
+    text-decoration: underline;
+    font-weight: normal;
+    font-size: 0.9em;
+}
+
+.nav a:hover {
+    color: #666;
+}
+
+/* Main content */
+h1 {
+    font-size: 2.2em;
+    margin-bottom: 0.3em;
+    color: #000;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 1.4em;
+    margin: 2em 0 1em 0;
+    color: #000;
+    font-weight: normal;
+}
+
+h3 {
+    font-size: 1.1em;
+    margin: 1.5em 0 0.8em 0;
+    color: #000;
+    font-weight: normal;
+}
+
+p {
+    margin-bottom: 1em;
+    text-align: left;
+}
+
+.subtitle {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 1.5em;
+    font-style: italic;
+}
+
+ul {
+    margin: 1em 0;
+    padding-left: 1.5em;
+}
+
+li {
+    margin-bottom: 0.8em;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Sections */
+.home {
+    margin-bottom: 2em;
+}
+
+.news {
+    margin-bottom: 2em;
+}
+
+.research {
+    margin-bottom: 2em;
+}
+
+.publications {
+    margin-bottom: 2em;
+}
+
+.contact {
+    margin-bottom: 2em;
+}
+
+/* Footer */
+footer {
+    margin-top: 3em;
+    padding-top: 2em;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    h2 {
+        font-size: 1.2em;
+    }
+    
+    .nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
